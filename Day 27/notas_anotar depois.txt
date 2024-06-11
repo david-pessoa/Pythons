@@ -1,0 +1,2 @@
+def function(*args): --> possibilita que a função receba quantos argumentos quiser
+                         todos os valores ficam guardados na tupla args
