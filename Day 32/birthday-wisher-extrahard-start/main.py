@@ -1,6 +1,6 @@
 import pandas as pd
 import smtplib
-from random import choices
+from random import randint
 import datetime as dt
 
 MY_EMAIL = "My email"
@@ -10,7 +10,7 @@ today = dt.datetime.now()
 
 df = pd.read_csv("birthdays.csv")
 contacts = df.to_dict(orient= 'records')
-chosen_letter = "./letter_templates/" + choices(["letter_1.txt", "letter_2.txt", "letter_3.txt"])[0]
+chosen_letter = f"./letter_templates/letter_{randint(1, 3)}.txt"
 
 for row in contacts:
     letter = ""
